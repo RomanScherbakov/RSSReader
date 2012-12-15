@@ -498,7 +498,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "RSSReader/DetailViewController.m"
-         timestampString = "374897910.801566"
+         timestampString = "376415389.064658"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "59"
@@ -524,7 +524,7 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "RSSReader/DetailViewController.m"
-         timestampString = "374897910.801566"
+         timestampString = "376415389.064658"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "34"
@@ -537,12 +537,38 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "RSSReader/DetailViewController.m"
-         timestampString = "374897910.801566"
+         timestampString = "376415389.064658"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "33"
          endingLineNumber = "33"
          landmarkName = "-setDetailItem:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "RSSReader/DetailViewController.m"
+         timestampString = "376415389.064658"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "85"
+         endingLineNumber = "85"
+         landmarkName = "-facebookButtonClicked:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "RSSReader/DetailViewController.m"
+         timestampString = "376415389.064658"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "87"
+         endingLineNumber = "87"
+         landmarkName = "-facebookButtonClicked:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

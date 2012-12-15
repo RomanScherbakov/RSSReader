@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
     <dependencies>
+        <development version="4500" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
@@ -67,25 +68,95 @@
         <scene sceneID="24">
             <objects>
                 <viewController storyboardIdentifier="" title="Detail" id="21" customClass="DetailViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="22">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="view" contentMode="scaleToFill" id="yBq-zq-9qd">
+                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Om9-YK-F3I">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11H-b5-AXb">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="377" id="7dh-Rx-jBv"/>
+                                </constraints>
                             </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpQ-kE-dZM">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="tIO-DY-o4F"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="fbButton.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebookButtonClicked:" destination="21" eventType="touchDragInside" id="bck-iA-NuT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8O-Ew-c4U">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Jbp-eD-dam"/>
+                                    <constraint firstAttribute="width" constant="30" id="m1g-9B-58K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="twitterButton.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="twitterButtonClicked:" destination="21" eventType="touchDragInside" id="mFv-ID-ZMN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bke-eQ-ZF8">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="emailButton.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="emailButtonClicked:" destination="21" eventType="touchDragInside" id="FeZ-AL-X3w"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Choose Social Networks or email " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USv-o5-J55">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="M9W-ec-Y2J"/>
+                                    <constraint firstAttribute="width" constant="212" id="Uaa-Se-tf8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Om9-YK-F3I" firstAttribute="leading" secondItem="22" secondAttribute="leading" type="default" id="HPb-Uw-dvo"/>
-                            <constraint firstItem="Om9-YK-F3I" firstAttribute="bottom" secondItem="22" secondAttribute="bottom" type="default" id="S5y-Ey-Sj9"/>
-                            <constraint firstItem="Om9-YK-F3I" firstAttribute="top" secondItem="22" secondAttribute="top" type="default" id="ieP-V3-cj8"/>
-                            <constraint firstItem="Om9-YK-F3I" firstAttribute="trailing" secondItem="22" secondAttribute="trailing" type="default" id="ina-ox-4oa"/>
+                            <constraint firstItem="NpQ-kE-dZM" firstAttribute="bottom" secondItem="bke-eQ-ZF8" secondAttribute="bottom" type="default" id="07v-4h-qGo"/>
+                            <constraint firstItem="11H-b5-AXb" firstAttribute="top" secondItem="USv-o5-J55" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="9em-sA-wlz"/>
+                            <constraint firstItem="NpQ-kE-dZM" firstAttribute="top" secondItem="yBq-zq-9qd" secondAttribute="top" type="default" id="B8r-hE-cn9"/>
+                            <constraint firstItem="USv-o5-J55" firstAttribute="leading" secondItem="yBq-zq-9qd" secondAttribute="leading" constant="11" id="DpB-DG-l92"/>
+                            <constraint firstItem="NpQ-kE-dZM" firstAttribute="leading" secondItem="S8O-Ew-c4U" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ExH-ms-P3I"/>
+                            <constraint firstItem="S8O-Ew-c4U" firstAttribute="top" secondItem="yBq-zq-9qd" secondAttribute="top" type="default" id="NiM-O2-rqd"/>
+                            <constraint firstItem="NpQ-kE-dZM" firstAttribute="bottom" secondItem="S8O-Ew-c4U" secondAttribute="bottom" type="default" id="Q2W-sk-MLi"/>
+                            <constraint firstAttribute="trailing" secondItem="NpQ-kE-dZM" secondAttribute="trailing" constant="38" id="QGr-aU-mEI"/>
+                            <constraint firstItem="11H-b5-AXb" firstAttribute="trailing" secondItem="yBq-zq-9qd" secondAttribute="trailing" type="default" id="Vmx-oq-bbV"/>
+                            <constraint firstItem="11H-b5-AXb" firstAttribute="leading" secondItem="yBq-zq-9qd" secondAttribute="leading" type="default" id="WXB-1f-UDY"/>
+                            <constraint firstItem="bke-eQ-ZF8" firstAttribute="trailing" secondItem="yBq-zq-9qd" secondAttribute="trailing" type="default" id="acL-9U-TiK"/>
+                            <constraint firstItem="USv-o5-J55" firstAttribute="top" secondItem="yBq-zq-9qd" secondAttribute="top" constant="4" id="gbP-jW-JgX"/>
+                            <constraint firstItem="bke-eQ-ZF8" firstAttribute="top" secondItem="yBq-zq-9qd" secondAttribute="top" type="default" id="w5K-Ns-6u8"/>
+                            <constraint firstItem="bke-eQ-ZF8" firstAttribute="leading" secondItem="NpQ-kE-dZM" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="xWi-CL-f4j"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="26"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="webView" destination="Om9-YK-F3I" id="exx-1l-YI9"/>
+                        <outlet property="webView" destination="11H-b5-AXb" id="lCW-mZ-tad"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
@@ -93,6 +164,28 @@
             <point key="canvasLocation" x="902" y="64"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="emailButton.png" width="72" height="72"/>
+        <image name="fbButton.png" width="72" height="72"/>
+        <image name="twitterButton.png" width="72" height="72"/>
+    </resources>
+    <classes>
+        <class className="DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="emailButtonClicked:"/>
+                <relationship kind="action" name="facebookButtonClicked:"/>
+                <relationship kind="action" name="twitterButtonClicked:"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="MasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

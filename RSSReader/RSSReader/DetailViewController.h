@@ -20,4 +20,11 @@
 
 @property (nonatomic, retain) NSURLRequest *request;
 
+
+- (IBAction)facebookButtonClicked:(id)sender;
+
+- (IBAction)twitterButtonClicked:(id)sender;
+
+- (IBAction)emailButtonClicked:(id)sender;
+
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "DetailViewController.h"
+#import "AddThis.h"
+
 
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -56,14 +58,57 @@
 {
     [super viewDidLoad];
     
-    _webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:_webView];
+    self.title = @"New";
     
     [self.webView loadRequest:self.request];
     
     [_webView setScalesPageToFit:YES];
     
     [self configureView];
+    
+    [AddThisSDK setAddThisPubId:@"ra-50bd01ce50ef44c8"];
+    [AddThisSDK setAddThisApplicationId:@"50bd214511c51365"];
+    
+    //facebook
+    [AddThisSDK setFacebookAPIKey:@"142639829216575"];
+	[AddThisSDK setFacebookAuthenticationMode:ATFacebookAuthenticationTypeDefault];
+    
+    //twitter
+    [AddThisSDK setTwitterConsumerKey:@"ERuxzaMaikQEIUGq3gP5nw"];
+    [AddThisSDK setTwitterConsumerSecret:@"k3J7h40aHUvYQQsMCG6Xh7tjMsTHqoiEodc4I7bFRw0"];
+    [AddThisSDK setTwitterCallBackURL:@"http://addthis.com/mobilesdk/twittertesting"];
+    [AddThisSDK setTwitterAuthenticationMode:ATTwitterAuthenticationTypeDefault];
+}
+
+- (IBAction)facebookButtonClicked:(id)sender {
+	//share to facebook
+    NSString *workStr = [NSString stringWithString:[[_request URL] absoluteString]];
+	[AddThisSDK shareURL:workStr
+			 withService:@"facebook"
+				   title:@""
+			 description:@""];
+}
+
+- (IBAction)twitterButtonClicked:(id)sender {
+    //share to twitter
+    NSString *workStr = [NSString stringWithString:[[_request URL] absoluteString]];
+	[AddThisSDK shareURL:workStr
+			 withService:@"twitter"
+				   title:@""
+			 description:@""];
+}
+
+- (IBAction)emailButtonClicked:(id)sender {
+	//share to native email
+    NSString *workStr = [NSString stringWithString:[[_request URL] absoluteString]];
+	[AddThisSDK shareURL:workStr
+			 withService:@"email"
+				   title:@""
+			 description:@""];
+}
+
+- (void)didInitiateShareForService:(NSString *)serviceCode {
+	NSLog(@"Share started for service - %@",serviceCode);
 }
 
 - (void)didReceiveMemoryWarning
